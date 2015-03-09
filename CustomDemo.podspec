@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CustomDemo"
-  s.version      = "0.0.1"
+  s.version      = "1.0.1"
   s.summary      = "A short description of CustomDemo."
 
   s.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "http://EXAMPLE/CustomDemo"
+  s.homepage     = "https://github.com/zqianhai/CustomDemo"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +39,13 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = { :type => 'MIT', :text => <<-ENDOFEXT
+                  Copyright (c) 2015 zqianhai Creu.
+                  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+                  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                  ENDOFEXT
+                   }
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -65,10 +71,10 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  # s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+  # s.ios.deployment_target = "7.0"
   # s.osx.deployment_target = "10.7"
 
 
@@ -89,7 +95,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source_files  =  "Custom_Demo/classes/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -115,8 +121,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  # s.framework  = "SystemConfiguration.framework"
+  # s.frameworks = "libz.dylib"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
